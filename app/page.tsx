@@ -3,15 +3,59 @@ import Link from "next/link";
 import QuoteCalculator from "@/components/QuoteCalculator";
 import ReviewsMarquee from "@/components/ReviewsMarquee";
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How much does move-out cleaning cost in Tulare County?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most move-out cleaning jobs start around $220 and vary by home size and condition."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Do you serve Visalia, Tulare, and Porterville?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Clean Dream serves Tulare County, including Visalia, Tulare, and Porterville."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "What cleaning types do you offer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We offer move-out cleaning, deep cleaning, and recurring standard house cleaning."
+      }
+    }
+  ]
+};
+
 export const metadata: Metadata = {
   title: "Move-Out Cleaning Tulare County | Clean Dream",
   description:
-    "Move-out cleaning in Tulare County with fast scheduling, clear pricing, and reliable crews in Visalia, Tulare, and Porterville."
+    "Move-out cleaning in Tulare County with fast scheduling, clear pricing, and reliable crews in Visalia, Tulare, and Porterville.",
+  alternates: {
+    canonical: "/"
+  },
+  openGraph: {
+    title: "Move-Out Cleaning Tulare County | Clean Dream",
+    description:
+      "Fast, reliable move-out cleaning service for renters, landlords, and homeowners across Tulare County.",
+    url: "/"
+  }
 };
 
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <section className="hero hero-home">
         <div className="hero-media" />
         <div className="container hero-content-wrap">
@@ -23,7 +67,7 @@ export default function HomePage() {
               before move-out inspections, showings, or new tenant move-ins.
             </p>
             <div className="cta-row">
-              <a className="button" href="tel:+15595550123">
+              <a className="button" href="tel:+5596560187">
                 Call Now
               </a>
             </div>
@@ -34,31 +78,31 @@ export default function HomePage() {
       <section className="city-banner-section">
         <div className="city-banner-marquee">
           <div className="city-banner-track">
-            <Link href="/tulare-cleaning-services">Tulare</Link>
+            <Link href="/service-areas/tulare">Tulare</Link>
             <span>|</span>
-            <Link href="/visalia-cleaning-services">Visalia</Link>
+            <Link href="/service-areas/visalia">Visalia</Link>
             <span>|</span>
-            <Link href="/porterville-cleaning-services">Porterville</Link>
+            <Link href="/service-areas/porterville">Porterville</Link>
             <span>|</span>
-            <Link href="/tulare-cleaning-services">Tulare</Link>
+            <Link href="/service-areas/tulare">Tulare</Link>
             <span>|</span>
-            <Link href="/visalia-cleaning-services">Visalia</Link>
+            <Link href="/service-areas/visalia">Visalia</Link>
             <span>|</span>
-            <Link href="/porterville-cleaning-services">Porterville</Link>
+            <Link href="/service-areas/porterville">Porterville</Link>
             <span>|</span>
           </div>
           <div className="city-banner-track" aria-hidden="true">
-            <Link href="/tulare-cleaning-services">Tulare</Link>
+            <Link href="/service-areas/tulare">Tulare</Link>
             <span>|</span>
-            <Link href="/visalia-cleaning-services">Visalia</Link>
+            <Link href="/service-areas/visalia">Visalia</Link>
             <span>|</span>
-            <Link href="/porterville-cleaning-services">Porterville</Link>
+            <Link href="/service-areas/porterville">Porterville</Link>
             <span>|</span>
-            <Link href="/tulare-cleaning-services">Tulare</Link>
+            <Link href="/service-areas/tulare">Tulare</Link>
             <span>|</span>
-            <Link href="/visalia-cleaning-services">Visalia</Link>
+            <Link href="/service-areas/visalia">Visalia</Link>
             <span>|</span>
-            <Link href="/porterville-cleaning-services">Porterville</Link>
+            <Link href="/service-areas/porterville">Porterville</Link>
             <span>|</span>
           </div>
         </div>
@@ -89,9 +133,9 @@ export default function HomePage() {
                   <div className="service-overlay-text">
                     <h3>Move-Out Cleaning</h3>
                     <p>
-                      Detailed top-to-bottom cleaning for vacant homes, apartments, and rental units across Tulare County.
+                      Detailed top-to-bottom cleaning for vacant homes, apartments, and rental units.
                     </p>
-                    <p className="service-price">STARTING FROM $220</p>
+                    <p className="service-price">Starting at $220</p>
                   </div>
                 </div>
               </Link>
@@ -114,7 +158,7 @@ export default function HomePage() {
                   <div className="service-overlay-text">
                     <h3>Deep Cleaning</h3>
                     <p>Reset your home with a heavy-detail clean that reaches buildup in kitchens, bathrooms, and baseboards.</p>
-                    <p className="service-price">STARTING FROM $200</p>
+                    <p className="service-price">Starting at $200</p>
                   </div>
                 </div>
               </Link>
@@ -136,8 +180,8 @@ export default function HomePage() {
                   />
                   <div className="service-overlay-text">
                     <h3>House Cleaning</h3>
-                    <p>Ongoing or one-time home cleaning for busy families and homeowners in Visalia, Tulare, and Porterville.</p>
-                    <p className="service-price">STARTING FROM $140</p>
+                    <p>Ongoing or one-time home cleaning for busy families and homeowners.</p>
+                    <p className="service-price">Starting at $140</p>
                   </div>
                 </div>
               </Link>
@@ -145,11 +189,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section>
+      {/* <section>
         <div className="container">
           <ReviewsMarquee />
         </div>
-      </section>
+      </section> */}
 
     </>
   );

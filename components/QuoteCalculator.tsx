@@ -53,8 +53,8 @@ export default function QuoteCalculator() {
     return total;
   }, [addons.fridge, addons.garage, addons.oven, bathrooms, bedrooms, cleaningType, condition, homeSize]);
 
-  const lowerBound = Math.max(0, calculatedPrice - 30);
-  const upperBound = calculatedPrice + 30;
+  const lowerBound = Math.max(0, calculatedPrice - 20);
+  const upperBound = calculatedPrice + 20;
 
   const toggleAddon = (key: "oven" | "fridge" | "garage") => {
     setAddons((prev) => ({ ...prev, [key]: !prev[key] }));
@@ -63,8 +63,8 @@ export default function QuoteCalculator() {
   return (
     <section className="quote-calculator-section">
       <div className="container quote-calculator-inner">
-        <div className="quote-calculator-grid">
-            <div className="quote-inputs">
+        <div className="quote-calculator-layout">
+          <div className="quote-inputs">
               <h2>Fast Cleaning Quote Calculator</h2>
               <p>Estimate your cleaning cost in under 30 seconds.</p>
 
@@ -134,35 +134,16 @@ export default function QuoteCalculator() {
                   Garage Cleaning
                 </label>
               </div>
-            </div>
-
-            <div className="quote-result-panel">
-              <p className="quote-selected-type">Selected: {cleaningTypeLabels[cleaningType]}</p>
-              <p className="quote-estimate-value">
-                Estimated Price: ${lowerBound} - ${upperBound}
-              </p>
-              <p className="quote-anchor">Most move-out cleanings in Tulare County fall between $250-$400</p>
-
-              <h3>Get your exact quote &amp; book your cleaning</h3>
-              <form className="quote-conversion-form" action="#" method="post">
-                <label>
-                  Name
-                  <input type="text" name="name" required />
-                </label>
-                <label>
-                  Phone
-                  <input type="tel" name="phone" required />
-                </label>
-                <label>
-                  Optional message
-                  <textarea name="message" rows={3} />
-                </label>
-                <button className="button" type="submit">
-                  Request Exact Quote
-                </button>
-              </form>
-            </div>
           </div>
+
+          <aside className="quote-summary">
+            <p className="quote-selected-type">Selected: {cleaningTypeLabels[cleaningType]}</p>
+            <p className="quote-estimate-value">
+              Estimated Price: ${lowerBound} - ${upperBound}
+            </p>
+            <p className="quote-anchor">Most move-out cleanings in Tulare County fall between $250-$400</p>
+          </aside>
+        </div>
       </div>
     </section>
   );

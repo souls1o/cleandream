@@ -4,7 +4,10 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Cleaning Services Visalia | Clean Dream",
   description:
-    "Cleaning services Visalia, CA from trusted local pros. Move-out, deep, and recurring home cleaning with fast quote turnaround."
+    "Cleaning services Visalia, CA from trusted local pros. Move-out, deep, and recurring home cleaning with fast quote turnaround.",
+  alternates: {
+    canonical: "/service-areas/visalia"
+  }
 };
 
 export default function VisaliaPage() {
@@ -18,7 +21,7 @@ export default function VisaliaPage() {
             service and quick scheduling.
           </p>
           <div className="cta-row">
-            <a className="button" href="tel:+15595550123">
+            <a className="button" href="tel:+5596560187">
               Call Visalia Team
             </a>
           </div>
@@ -50,9 +53,9 @@ export default function VisaliaPage() {
         <div className="container">
           <h2>Explore Service Pages</h2>
           <p>
-            See <Link href="/move-out-cleaning-tulare-county">move out cleaning Tulare County</Link>,{" "}
-            <Link href="/deep-cleaning-tulare-county">deep cleaning Tulare County</Link>, and{" "}
-            <Link href="/house-cleaning-tulare-county">house cleaning Tulare County</Link>.
+            See <Link href="/services/move-out-cleaning">move out cleaning Tulare County</Link>,{" "}
+            <Link href="/services/deep-cleaning">deep cleaning Tulare County</Link>, and{" "}
+            <Link href="/services/standard-cleaning">house cleaning Tulare County</Link>.
           </p>
         </div>
       </section>

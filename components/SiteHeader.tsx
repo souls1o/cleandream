@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -8,7 +9,7 @@ export default function SiteHeader() {
   const serviceLinks = [
     { href: "/services/move-out-cleaning", label: "Move-Out" },
     { href: "/services/deep-cleaning", label: "Deep Cleaning" },
-    { href: "/services/standard-cleaning", label: "House Cleaning" }
+    { href: "/services/standard-cleaning", label: "Standard House Cleaning" }
   ];
   const areaLinks = [
     { href: "/service-areas/visalia", label: "Visalia" },
@@ -21,8 +22,15 @@ export default function SiteHeader() {
   return (
     <header className="site-header">
       <div className="container">
-        <Link href="/" className="brand">
-          Clean Dream
+        <Link href="/" className="brand" aria-label="Clean Dream home">
+          <Image
+            src="/assets/images/logo.png"
+            alt="Clean Dream"
+            width={395}
+            height={148}
+            className="brand-logo"
+            priority
+          />
         </Link>
         <input id="nav-toggle" className="nav-toggle" type="checkbox" aria-hidden="true" />
         <label className="nav-toggle-button" htmlFor="nav-toggle" aria-label="Toggle navigation menu">

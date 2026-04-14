@@ -4,7 +4,10 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Cleaning Services Porterville | Clean Dream",
   description:
-    "Cleaning services Porterville, CA for move-out, deep, and routine home cleaning. Reliable local crews and quick quote response."
+    "Cleaning services Porterville, CA for move-out, deep, and routine home cleaning. Reliable local crews and quick quote response.",
+  alternates: {
+    canonical: "/service-areas/porterville"
+  }
 };
 
 export default function PortervillePage() {
@@ -18,7 +21,7 @@ export default function PortervillePage() {
             pricing for local homeowners and renters.
           </p>
           <div className="cta-row">
-            <a className="button" href="tel:+15595550123">
+            <a className="button" href="tel:+5596560187">
               Call Porterville Team
             </a>
           </div>
@@ -52,9 +55,9 @@ export default function PortervillePage() {
         <div className="container">
           <h2>Internal Links</h2>
           <p>
-            Compare <Link href="/move-out-cleaning-tulare-county">move out cleaning Tulare County</Link>,{" "}
-            <Link href="/deep-cleaning-tulare-county">deep cleaning Tulare County</Link>, and{" "}
-            <Link href="/house-cleaning-tulare-county">house cleaning Tulare County</Link>.
+            Compare <Link href="/services/move-out-cleaning">move out cleaning Tulare County</Link>,{" "}
+            <Link href="/services/deep-cleaning">deep cleaning Tulare County</Link>, and{" "}
+            <Link href="/services/standard-cleaning">house cleaning Tulare County</Link>.
           </p>
         </div>
       </section>

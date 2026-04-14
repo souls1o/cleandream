@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Move Out Cleaning Tulare County | Clean Dream",
+  title: "Move Out Cleaning | Clean Dream",
   description:
-    "Move out cleaning Tulare County for renters and landlords. Detailed checklist, fast scheduling, and clear pricing."
+    "Move out cleaning Tulare County for renters and landlords. Detailed checklist, fast scheduling, and clear pricing.",
+  alternates: {
+    canonical: "/services/move-out-cleaning"
+  }
 };
 
 export default function MoveOutPage() {
@@ -18,7 +21,7 @@ export default function MoveOutPage() {
             inspection, new tenants, or listing photos.
           </p>
           <div className="cta-row">
-            <a className="button" href="tel:+15595550123">
+            <a className="button" href="tel:+5596560187">
               Call for Move-Out Service
             </a>
           </div>
@@ -60,8 +63,8 @@ export default function MoveOutPage() {
           <h2>Related Services</h2>
           <p>
             Many customers pair move-out service with{" "}
-            <Link href="/deep-cleaning-tulare-county">deep cleaning in Tulare County</Link> or switch to{" "}
-            <Link href="/house-cleaning-tulare-county">house cleaning in Tulare County</Link> after moving in.
+            <Link href="/services/deep-cleaning">deep cleaning in Tulare County</Link> or switch to{" "}
+            <Link href="/services/standard-cleaning">house cleaning in Tulare County</Link> after moving in.
           </p>
         </div>
       </section>

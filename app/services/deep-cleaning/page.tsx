@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Deep Cleaning Tulare County | Clean Dream",
+  title: "Deep Cleaning | Clean Dream",
   description:
-    "Deep cleaning Tulare County homes with detailed kitchens, bathrooms, and baseboards. Ideal before events, guests, or seasonal resets."
+    "Deep cleaning Tulare County homes with detailed kitchens, bathrooms, and baseboards. Ideal before events, guests, or seasonal resets.",
+  alternates: {
+    canonical: "/services/deep-cleaning"
+  }
 };
 
 export default function DeepCleaningPage() {
@@ -18,7 +21,7 @@ export default function DeepCleaningPage() {
             focus on detail, buildup removal, and full-home reset.
           </p>
           <div className="cta-row">
-            <a className="button" href="tel:+15595550123">
+            <a className="button" href="tel:+5596560187">
               Call for Deep Cleaning
             </a>
           </div>
@@ -54,8 +57,8 @@ export default function DeepCleaningPage() {
           <h2>Internal Links</h2>
           <p>
             Need turnover help? See our{" "}
-            <Link href="/move-out-cleaning-tulare-county">move out cleaning Tulare County</Link> page. For recurring
-            service, visit <Link href="/house-cleaning-tulare-county">house cleaning Tulare County</Link>.
+            <Link href="/services/move-out-cleaning">move out cleaning Tulare County</Link> page. For recurring
+            service, visit <Link href="/services/standard-cleaning">house cleaning Tulare County</Link>.
           </p>
         </div>
       </section>
