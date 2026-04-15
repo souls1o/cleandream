@@ -26,21 +26,18 @@ export default function ServicesPage() {
               <Link href="/services/move-out-cleaning">Move-Out Cleaning</Link>
             </h2>
             <p>Detailed top-to-bottom cleaning for vacant homes, apartments, and turnover properties.</p>
-            <p className="service-price">STARTING FROM $220</p>
           </article>
           <article className="card">
             <h2>
               <Link href="/services/deep-cleaning">Deep Cleaning</Link>
             </h2>
             <p>High-detail cleaning for kitchens, bathrooms, baseboards, and heavily used areas.</p>
-            <p className="service-price">STARTING FROM $200</p>
           </article>
           <article className="card">
             <h2>
               <Link href="/services/standard-cleaning">House Cleaning</Link>
             </h2>
             <p>Ongoing or one-time maintenance cleaning for busy homes across the county.</p>
-            <p className="service-price">STARTING FROM $140</p>
           </article>
         </div>
       </section>

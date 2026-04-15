@@ -65,7 +65,7 @@ export default function QuoteCalculator() {
       <div className="container quote-calculator-inner">
         <div className="quote-calculator-layout">
           <div className="quote-inputs">
-              <h2>Fast Cleaning Quote Calculator</h2>
+              <h2>Quote Calculator</h2>
               <p>Estimate your cleaning cost in under 30 seconds.</p>
 
               <div className="quote-field-grid">

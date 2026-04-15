@@ -68,7 +68,7 @@ export default function HomePage() {
             </p>
             <div className="cta-row">
               <a className="button" href="tel:+5596560187">
-                Call Now
+                Request Quote
               </a>
             </div>
           </div>
@@ -135,7 +135,6 @@ export default function HomePage() {
                     <p>
                       Detailed top-to-bottom cleaning for vacant homes, apartments, and rental units.
                     </p>
-                    <p className="service-price">Starting at $220</p>
                   </div>
                 </div>
               </Link>
@@ -158,7 +157,6 @@ export default function HomePage() {
                   <div className="service-overlay-text">
                     <h3>Deep Cleaning</h3>
                     <p>Reset your home with a heavy-detail clean that reaches buildup in kitchens, bathrooms, and baseboards.</p>
-                    <p className="service-price">Starting at $200</p>
                   </div>
                 </div>
               </Link>
@@ -181,7 +179,6 @@ export default function HomePage() {
                   <div className="service-overlay-text">
                     <h3>House Cleaning</h3>
                     <p>Ongoing or one-time home cleaning for busy families and homeowners.</p>
-                    <p className="service-price">Starting at $140</p>
                   </div>
                 </div>
               </Link>
